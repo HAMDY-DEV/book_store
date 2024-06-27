@@ -96,7 +96,7 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
                           TextButton(
                               onPressed: () {
                                 navigatorToReplacement(
-                                    context, const ResetPasswordView());
+                                    context, const LoginView());
                               },
                               child: Text(
                                 'Login',
