@@ -5,7 +5,6 @@ import 'package:book_store/core/widget/show_loading_and_error.dart';
 import 'package:book_store/features/auth/presentation/manager/auth_cubit.dart';
 import 'package:book_store/features/auth/presentation/manager/auth_state.dart';
 import 'package:book_store/features/auth/presentation/view/login_view.dart';
-import 'package:book_store/features/auth/presentation/view/reset_password_view.dart';
 import 'package:book_store/features/auth/presentation/widget/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

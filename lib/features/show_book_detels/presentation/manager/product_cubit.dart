@@ -55,7 +55,7 @@ class ProductCubit extends Cubit<ProductState> {
   }
 
   List<dynamic> favoriteId = [];
-  getFavorite() {
+  void getFavorite() {
     emit(GetFavoriteLoading());
     DioHelper.getData(
       url: 'wishlist',

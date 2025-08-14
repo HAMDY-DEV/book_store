@@ -7,7 +7,7 @@ class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitialState());
 
 //Login
-  login({required String email, required String password}) {
+  void login({required String email, required String password}) {
     emit(LoginLoadingStat());
     DioHelper.postData(url: "login", data: {
       "email": email,
@@ -21,7 +21,7 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
 //forgot_password
-  forgotPassword({required String email}) {
+  void forgotPassword({required String email}) {
     emit(ForgetPasswordLoadingStat());
     DioHelper.postData(url: "forget-password", data: {
       "email": email,
@@ -33,7 +33,7 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
 //ResetPassword
-  resetPassword({
+  void resetPassword({
     required String code,
     required String password,
     required String passwordConfirmation,
@@ -51,7 +51,7 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
 //Signup
-  signup({
+  void signup({
     required String name,
     required String email,
     required String password,

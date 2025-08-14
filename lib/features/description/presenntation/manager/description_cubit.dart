@@ -50,7 +50,7 @@ class DescriptionCubit extends Cubit<DescriptionState> {
     });
   }
 
-  getFavorite() {
+  void getFavorite() {
     emit(GetFavoriteLoading());
     DioHelper.getData(
       url: 'wishlist',

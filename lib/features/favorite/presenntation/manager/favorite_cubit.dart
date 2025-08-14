@@ -11,7 +11,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
 
   FavoriteModel? favoriteModel;
 
-  showFavorite() {
+  void showFavorite() {
     emit(FavoriteLoading());
     DioHelper.getData(
       url: 'wishlist',
@@ -24,7 +24,7 @@ class FavoriteCubit extends Cubit<FavoriteState> {
     });
   }
 
-  deleteFavorite({required int id}) {
+  void deleteFavorite({required int id}) {
     emit(DeleteFavoriteLoading());
     DioHelper.postData(
       url: 'remove-from-wishlist',

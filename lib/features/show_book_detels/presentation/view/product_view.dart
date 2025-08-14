@@ -92,8 +92,8 @@ class ProductView extends StatelessWidget {
                         ],
                       )
                     : ShmmerListItma(
-                  itemCount: 4,
-                );
+                        itemCount: 4,
+                      );
               },
             )),
       ),

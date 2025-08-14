@@ -10,7 +10,7 @@ class ShowCategoryCubit extends Cubit<ShowCategoryState> {
 
   ShowCategoryModel? showCategoryModel;
 
-  getCategory({required id}) {
+  void getCategory({required id}) {
     showCategoryModel = null;
     emit(ShowCategoryLoading());
     DioHelper.getData(url: 'categories/$id').then((value) {

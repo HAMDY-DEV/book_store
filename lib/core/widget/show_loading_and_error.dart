@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:rive/rive.dart';
 
-showLoading({required context}) {
+void showLoading({required context}) {
   showDialog(
     context: context,
     builder: (context) {
@@ -21,21 +21,21 @@ showLoading({required context}) {
   );
 }
 
-showError({required context, required textError}) {
+void showError({required context, required textError}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       duration: const Duration(seconds: 1),
       backgroundColor: Colors.red,
       content: Text(textError)));
 }
 
-showSnackBar({required context, required textError}) {
+void showSnackBar({required context, required textError}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       duration: const Duration(seconds: 1),
       backgroundColor: AppColors.primaryColor,
       content: Text(textError)));
 }
 
-showLottieDialog({required context, required String lottieAsset}) {
+void showLottieDialog({required context, required String lottieAsset}) {
   showDialog(
     context: context,
     builder: (context) {
@@ -50,7 +50,7 @@ showLottieDialog({required context, required String lottieAsset}) {
   );
 }
 
-showRiveDialog({required context, required String path}) {
+void showRiveDialog({required context, required String path}) {
   showDialog(
     context: context,
     builder: (context) {

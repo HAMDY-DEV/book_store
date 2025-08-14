@@ -34,7 +34,7 @@ class ProfileCubit extends Cubit<ProfileState> {
   }
 
   //Update Profile
-  updateProfile({
+  Future<void> updateProfile({
     required String name,
     required XFile? image,
     required String phone,

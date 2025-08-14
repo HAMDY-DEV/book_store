@@ -8,11 +8,11 @@ class CheckOutCubit extends Cubit<CheckOutState> {
   static CheckOutCubit get(context) => BlocProvider.of(context);
 
   void checkOut(context, String name, String phone, String address,
-      String governorate_id, String email) {
+      String governorateId, String email) {
     emit(CheckOutLoading());
     DioHelper.postData(url: 'place-order', data: {
       'name': name,
-      'governorate_id': governorate_id,
+      'governorate_id': governorateId,
       'phone': phone,
       'address': address,
       'email': email

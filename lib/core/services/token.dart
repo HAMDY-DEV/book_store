@@ -2,11 +2,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class Token {
   static SharedPreferences? _sharedToken;
-  static init() async {
+  static Future<void> init() async {
     _sharedToken = await SharedPreferences.getInstance();
   }
 
-  static siveToken({required String token}) {
+  static void siveToken({required String token}) {
     _sharedToken!.setString('token', token);
   }
 
